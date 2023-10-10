@@ -9,7 +9,7 @@ export default class WireAdapterDemo extends LightningElement {
     // To Get Record Id for Account
     @api recordId;
 
-    // @wire (Adapter,Constractors)
+    // @wire (Adapter,Constractors) --> another Way with same results using import referances
     @wire(getRecord, {recordId: '$recordId', fields: [NAME_FIELD,PHONE_FIELD]})
     record; // record property contain data & error
 
@@ -18,6 +18,9 @@ export default class WireAdapterDemo extends LightningElement {
 
         // Ternary Operator ? --> (Condation) ? true : false
         return this.record.data ? getFieldValue(this.record.data , NAME_FIELD) : '';
+
+        // Another return statment with same result
+        // return this.data.fields.Name.value;
     }
 
     get phone(){
@@ -25,6 +28,16 @@ export default class WireAdapterDemo extends LightningElement {
         return this.record.data ? getFieldValue(this.record.data , PHONE_FIELD) : '';
 
     }
+
+    // @wire (Adapter,Constractors) --> another Way with same results using objects strings referances
+    @wire(getRecord, {recordId: '$recordId', fields: ['Account.AccountNumber']})
+    record2; // record property contain data & error
+
+    get numberOfAccount(){
+        
+        return this.record2.data ? getFieldValue(this.record2.data , 'Account.AccountNumber') : '';
+    }
+
 
 
 }
