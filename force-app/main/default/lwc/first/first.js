@@ -7,7 +7,7 @@ export default class First extends LightningElement {
 
     // Create lwc properties - add api first.
     @api message // Private Property - example hold record ID
-    x;           // Public Property - Inside LWC Only  
+    x;           // Public Property - Inside LWC Only 
 
     @api total = 30;
 
