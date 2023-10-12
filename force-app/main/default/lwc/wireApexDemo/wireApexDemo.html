@@ -1,10 +1,14 @@
 <template>
-
-    <lightning-card title="Related Contacts" icon-name="custom: custom14">
+    <lightning-card title="Related Contacts" icon-name="custom:custom14">
         <!--Add Unordered List to Display Contacts-->
         <ul class="slds-var-m-around_medium">
 
-            <!-- Add Loop to iterate for list of returned contacts-->
+            <template if:true={record.data}>
+                <lightning-formatted-text value={name} class="slds-text-heading_large">
+                </lightning-formatted-text>
+            </template>
+
+            <!-- Add Loop to iterate for list of returned contacts from wire property-->
             <template for:each={contacts.data} for:item="contact">
 
                 <li key={contact.Id}>
@@ -14,5 +18,35 @@
             </template>
         </ul>
     </lightning-card>
+
+    <lightning-card title="Related Contacts 2" icon-name="custom:custom14">
+
+        <!--Add Unordered List to Display Contacts-->
+         <ul class="slds-var-m-around_medium">
+            
+            <template if:true={record.data}>
+                <lightning-formatted-text value={name} class="slds-text-heading_large">
+                </lightning-formatted-text>
+            </template>
+
+        <!-- Add Loop to iterate for list of returned contacts from wire function-->
+        <template for:each={contactsFromWireFun} for:item="contact2">
+
+            <li key={contact2.Id}>
+                Name : {contact2.FirstName} - {contact2.LastName}
+            </li>
+
+        </template>
+
+        <template if:true={errorFromWireFun}>
+
+        </template>
+    </ul>
+    </lightning-card>
+
     
+
+
+    
+
 </template>
