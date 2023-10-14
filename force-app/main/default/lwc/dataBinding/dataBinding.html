@@ -4,9 +4,14 @@
     <p>Hello, {message}!</p>
 
     <!--Add Input Element-->
-    <lightning-input label="Enter Your Message" value={message} onchange={handleChange}>
+    <lightning-input label="Enter Your Message" value={message} onchange={handleChange}></lightning-input>
         
-    </lightning-input>
-
+    <!--For Fetch Data Using Getter Example-->
+    <!--fullNameHandleChange Will Call whenever any changing happen to below inputs-->
+    <lightning-input name='fname' label="Enter First Name" onchange={fullNameHandleChange}></lightning-input>     
+    <lightning-input name='lname' label="Enter Last Name"  onchange={fullNameHandleChange}></lightning-input>
+    <p class="slds-var-m-top_medium">Full Name In UpperCase: {fullNameUpperCase}</p>     
+   
+    
     </lightning-card>
 </template>
