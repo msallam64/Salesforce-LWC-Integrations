@@ -33,6 +33,15 @@ export default class DataBinding extends LightningElement {
 
         // Return First Name & last Name in uppercase
         return `${this.firstName} ${this.lastName}`.toUpperCase();
+    }
 
+
+    // 3- Using QuerySelector To Fetch Data
+    txt = 'First Text';
+    handleClick(event){
+        // change value of txt - get element by Id from HTML file if you have more than one lighting-input
+        this.txt = this.template.querySelector("lightning-input[data-my-id=in3]").value;
+         
+        
     }
 }

@@ -4,14 +4,25 @@
     <p>Hello, {message}!</p>
 
     <!--Add Input Element-->
+    <p>Get Data From HTML</p>
     <lightning-input label="Enter Your Message" value={message} onchange={handleChange}></lightning-input>
         
     <!--For Fetch Data Using Getter Example-->
     <!--fullNameHandleChange Will Call whenever any changing happen to below inputs-->
+    <p>Get Data Using Getter</p>
     <lightning-input name='fname' label="Enter First Name" onchange={fullNameHandleChange}></lightning-input>     
     <lightning-input name='lname' label="Enter Last Name"  onchange={fullNameHandleChange}></lightning-input>
     <p class="slds-var-m-top_medium">Full Name In UpperCase: {fullNameUpperCase}</p>     
    
+
+    <!--For Fetch Data Query Selector Example-->
+    <br/>
+    <p>Get Data Using Query</p>
+    <p>Hello, {txt}</p>
+    <lightning-input data-my-id="in3" label="TXT Valu" value={txt}></lightning-input>
+    <br/>
+
+    <lightning-button label="Click Here " onclick={handleClick} variant="brand"></lightning-button>
     
     </lightning-card>
 </template>
