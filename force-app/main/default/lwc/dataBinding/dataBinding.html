@@ -15,14 +15,25 @@
     <p class="slds-var-m-top_medium">Full Name In UpperCase: {fullNameUpperCase}</p>     
    
 
-    <!--For Fetch Data Query Selector Example-->
+    <!--For Fetch Data QuerySelector Example-->
     <br/>
-    <p>Get Data Using Query</p>
+    <p>Get Data Using QuerySelector</p>
     <p>Hello, {txt}</p>
-    <lightning-input data-my-id="in3" label="TXT Valu" value={txt}></lightning-input>
+    <lightning-input data-my-id="in1" label="TXT Valu" value={txt}></lightning-input>
     <br/>
 
-    <lightning-button label="Click Here " onclick={handleClick} variant="brand"></lightning-button>
+    <lightning-button label="Click Here " onclick={handleClickQuerySelector} variant="brand"></lightning-button>
+
+
+    <!--For Fetch Data QuerySelectorAll Example-->
+    <br/><br/>
+    <p>Get Data Using QuerySelectorAll</p>
+    <p>Hello, {txt1} {txt2}</p>
+    <lightning-input name ="in2" label="TXT 1" value={txt1}></lightning-input>
+    <lightning-input name ="in3" label="TXT 2" value={txt2}></lightning-input>
+    <br/>
+
+    <lightning-button label="Click Here " onclick={handleClickQuerySelectorAll} variant="brand"></lightning-button>
     
     </lightning-card>
 </template>
