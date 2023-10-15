@@ -38,10 +38,30 @@ export default class DataBinding extends LightningElement {
 
     // 3- Using QuerySelector To Fetch Data
     txt = 'First Text';
-    handleClick(event){
-        // change value of txt - get element by Id from HTML file if you have more than one lighting-input
-        this.txt = this.template.querySelector("lightning-input[data-my-id=in3]").value;
-         
-        
+    handleClickQuerySelector(event){
+        // change value of txt - get element by Id from HTML file - if you have more than one lighting-input use data-my-id=in3
+        this.txt = this.template.querySelector("lightning-input[data-my-id=in1]").value;   
+    }
+
+
+    // 4- Using QuerySelectorAll To Fetch Data
+    txt1 = 'Text 1';
+    txt2 = 'Text 2';
+    handleClickQuerySelectorAll(event){
+        // change value of txt1 & txt2
+        // Get All lighting-input in Var using QuerySelectorAll
+        var input = this.template.querySelectorAll("lightning-input");
+        // Loop to get your target lighting-input
+        input.forEach(function(element){
+            // Check Which one by its name
+            if(element.name == 'in2'){
+                this.txt1 = element.value;
+            }else if (element.name == 'in3'){
+                this.txt2 = element.value;
+            }
+        }, this);
+
+
+
     }
 }
