@@ -1,0 +1,16 @@
+<template>
+
+    <!--Using ChildLWC inside ParentLWC-->
+
+    <lightning-card>
+        <div class="slds-var-p-top_large">
+            <!--To use LWC another one use LWC Name and add c- - example: c-childLWC-->
+            <c-childLWC class="slds-text-heading_medium" item-name = "Text1"></c-childLWC>
+        </div>
+
+        <div class="slds-var-p-top_large">
+            <c-childLWC class="slds-text-heading_medium" item-name = "Text2"></c-childLWC>
+        </div>
+    </lightning-card>
+    
+</template>
