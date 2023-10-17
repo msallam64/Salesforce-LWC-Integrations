@@ -1,7 +1,6 @@
 import { LightningElement, api } from 'lwc';
 
-export default class ChildLWC extends LightningElement {
-
+export default class Child extends LightningElement {
     upperCaseItemName = 'Default Value';
 
     // Getter - public property because used in another component
