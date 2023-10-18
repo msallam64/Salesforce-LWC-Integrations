@@ -5,12 +5,21 @@
     <lightning-card>
         <div class="slds-var-p-top_large">
             <!--To use LWC another one use LWC Name and add c- - example: c-child-->
-            <c-child class="slds-text-heading_medium" item-name = "Text 1"></c-child>
+            <c-child class="slds-text-heading_medium" ></c-child>
         </div>
 
         <div class="slds-var-p-top_large">
-            <c-child class="slds-text-heading_medium" item-name = "Text 2"></c-child>
+            <c-child class="slds-text-heading_medium" item-name = "Text"></c-child>
         </div>
+
+        <!--To Display Value Passed From Child-->
+        <!--Render Child as It Is-->
+        <!--Add Value To Property By Its Name And Consider Kabab-case -->
+        <div class="slds-var-p-top_large">
+            <c-child class="slds-text-heading_medium" txt-value="Hi From Parent"></c-child>
+        </div>
+
+
     </lightning-card>
     
 </template>
