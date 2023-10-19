@@ -11,7 +11,6 @@ export default class MiscMultipleTemplate extends LightningElement {
     render(){
         return this.tempOne ? tempOne : tempTwo;
     }
-
     // Switch
     switchTemp(){
         // If temp one = true then it will be false 
