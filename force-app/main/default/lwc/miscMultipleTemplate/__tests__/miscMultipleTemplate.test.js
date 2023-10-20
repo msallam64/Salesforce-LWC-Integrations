@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import {createElement } from 'lwc';
 import MiscMultipleTemplate from 'c/miscMultipleTemplate';
 
 describe('c-misc-multiple-template', () => {

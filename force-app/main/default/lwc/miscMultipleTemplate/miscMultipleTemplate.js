@@ -17,4 +17,6 @@ export default class MiscMultipleTemplate extends LightningElement {
         this.tempOne = this.tempOne === true ? false : true ;
     }
 
+    
+
 }
