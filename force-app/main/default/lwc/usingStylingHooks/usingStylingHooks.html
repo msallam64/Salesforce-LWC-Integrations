@@ -1,0 +1,22 @@
+<template>
+
+    <lightning-card title="Using SLDS Styling Hooks For LWC">
+
+        <div class="slds-var-m-around_medium">
+            <div>
+                Base LWC
+            </div>
+            <lightning-button class="slds-var-p-around_medium" variant="brand" label="Submit"></lightning-button>
+            <lightning-badge label="Active"></lightning-badge><br/>
+
+            <div>
+                Base LWC With Custom Styling
+            </div>
+            <!--Can Use Both custom and predefined style like below button-->
+            <lightning-button class="myCustomStyleForButton slds-var-p-around_medium" variant="brand" label="Submit"></lightning-button>
+            <lightning-badge class="myStyleForBadge" label="Active"></lightning-badge><br/>
+
+        </div>
+    </lightning-card>
+    
+</template>

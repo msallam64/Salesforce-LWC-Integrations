@@ -1,0 +1,9 @@
+.myCustomStyleForButton{
+    --sds-c-button-brand-color-background: orange;
+    --sds-c-button-brand-color-border: black;
+}
+
+.myStyleForBadge{
+    --sds-c-badge-brand-color-background: green;
+    --sds-c-badge-brand-color-border: white;
+}
