@@ -1,0 +1,6 @@
+/* Importing The Style From Another CSS */
+@import 'c/cssLib';
+
+p{
+    color: red;
+}
